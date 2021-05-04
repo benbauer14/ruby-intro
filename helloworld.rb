@@ -106,6 +106,32 @@ end
 puts returnAll
 
 ##---------------LOOPS-----------------------
+
+#while loop
+$a = 0
+$b = 10
+while $a < $b do
+    puts("While loopin: $a = #$a")
+    $a +=2
+end
+
+#begin while
+$a = 0
+$b = 10
+begin
+    puts("Begin loopin: $a = #$a")
+    $a +=2
+end while $a < $b
+
+#until loop
+$a = 0
+$b = 5
+
+until $a > $b do
+    puts "until loopin: $a = #$a"
+    $a +=1
+end
+
 #for loop
 def loopFunc (*values)
     for i in 0...values.length
@@ -115,10 +141,10 @@ end
  #do not include () around parameters in function
 loopFunc "Ben", "Joel", "Pat"
 
-#while loop
-$a = 0
-$b = 10
-while $a < $b do
-    puts("While loopin: $a = #$a")
-    $a +=1
+#for loop using next
+for i in 0..5
+    if i < 2 then
+        next
+    end
+    puts "Value of #{i}"
 end
